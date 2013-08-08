@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>E-Buzz | Home</title>
+    <meta name="Description" CONTENT="This is an online platform powered by ruby on rails and nokogiri that provide recommendations and help you discover new music, movies, shows, books, authors or games, based on what you like.">
+    <link href="http://ebuzz.herokuapp.com/assets/application-ba19f20b37f6d564091fe7efd47c951d.css" media="all" rel="stylesheet" type="text/css" />
+    <script src="/assets/application-a067a5e326142ea997bcd041d3bc4fb4.js" type="text/javascript"></script>
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  	<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="navbar-inner">
+    <div class="container">
+      <a href="/" id="logo">e-buZZ Data Scraper</a>
+      <nav>
+        <ul class="nav pull-right">
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+    <div class="container">
+      <div class="hero-unit">
+
+  <h2>
+    Welcome to the e-buZZ favourites search scraper
+  </h2>
+      <div style="padding-top:50px; min-height:270px;">
+	    <% i=0 %>
+		<% @similarities.each do |sim| %> 
+	      <div style="float:left; padding:10px; background-color:#eeeeee;"><a href="#" id ="flip" class="test" rel="<%= @simsearch_datatype[i] %>"><b><%= sim %></b></a></div>
+	    <% i = i+1 %>
+	    <% end %>
+	  </div>
+</div>
+
+      <footer class="footer">
+  <small>
+    © e-buZZ. All rights reserved | Created by <a href="http://www.facebook.com/rajeev.reddy.d">drreddy</a>
+  </small>
+  <nav>
+    <ul>
+      <li>Powered by Ruby on Rails, Bootstrap and Nokogiri</li>
+    </ul>
+  </nav>
+</footer>
+
+    </div>
+  </body>
+</html>
